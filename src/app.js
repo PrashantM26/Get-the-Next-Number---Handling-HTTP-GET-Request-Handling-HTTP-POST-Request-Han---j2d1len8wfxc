@@ -22,7 +22,7 @@ app.get('/api/get-next-num', (req, res) => {
       status: 'success',
       message: nextNum,
     });
-  }
+  //}
 })
   
 
