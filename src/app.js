@@ -15,14 +15,13 @@ app.get('/api/get-next-num', (req, res) => {
       status: 'failure',
       message: 'Invalid number. Please provide a valid number in the request body.',
     });
+  } else {
+    const nextNum = parseInt(num) + 1;
+    res.status(200).json({
+      status: 'success',
+      message: nextNum,
+    });
   }
-
-  const nextNum = num + 1;
-
-  res.status(200).json({
-    status: 'success',
-    message: nextNum,
-  });
 })
   
 
