@@ -8,9 +8,9 @@ app.use(express.json());
 // Endpoint : /api/get-next-num
 // Return the response as {message : , status: }
 app.get('/api/get-next-num', (req, res) => {
-  const num = req.params.get-next-num;
+  const num = req.body.num;
   if(!num && isNaN(num)){
-    app.status(400).jsom({
+    app.status(400).json({
       status : "failure"
     })
   }
