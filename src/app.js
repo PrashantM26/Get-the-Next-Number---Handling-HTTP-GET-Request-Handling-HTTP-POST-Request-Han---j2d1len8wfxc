@@ -10,12 +10,13 @@ app.use(express.json());
 app.get('/api/get-next-num', (req, res) => {
    const num = req.body.num;
 
-  if (!num || isNaN(num) || num == 0) {
+  /*if (!num || isNaN(num) || num == 0) {
     return res.status(400).json({
       status: 'failure',
       message: 'Invalid number. Please provide a valid number in the request body.',
     });
-  } else {
+  } else {*/
+   
     const nextNum = parseInt(num) + 1;
     res.status(200).json({
       status: 'success',
