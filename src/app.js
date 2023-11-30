@@ -9,7 +9,7 @@ app.use(express.json());
 // Return the response as {message : , status: }
 app.get('/api/get-next-num', (req, res) => {
   const num = req.params.get-next-num;
-  if(!num && !isNaN(num)){
+  if(!num && isNaN(num)){
     app.status(400).jsom({
       status : "failure"
     })
